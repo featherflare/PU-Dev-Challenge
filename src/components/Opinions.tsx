@@ -21,7 +21,7 @@ const Opinions = forwardRef(
                 >
                   <div>
                     <div
-                      className={`IBM body2 ${
+                      className={`IBM body3-bold ${
                         i % 2 != 1 ? 'direction-invert' : 'direction-normal'
                       }`}
                     >

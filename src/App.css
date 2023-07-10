@@ -93,6 +93,13 @@ body {
   line-height: 150%;
 }
 
+.body3-bold {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+}
+
 .padding1 {
   margin: 5% auto;
 }
