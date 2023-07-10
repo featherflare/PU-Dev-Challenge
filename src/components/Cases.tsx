@@ -1,6 +1,6 @@
 export default function Cases() {
   return (
-    <section className='section invert'>
+    <section className='section invert flex'>
       <div className='margin'>
         <div className='IBM header2'>จำนวนคดีที่เกิดขึ้น</div>
         <div className='IBM body padding2'>

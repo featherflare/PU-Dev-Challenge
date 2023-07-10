@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-    <section className='section'>
+    <section className='section flex'>
       <div className='IBM header center'>ม.๑๑๒</div>
       <div className='IBM body center margin padding1'>
         “ผู้ใดหมิ่นประมาท ดูหมิ่น หรือแสดงความอาฆาตมาดร้าย พระมหากษัตริย์
