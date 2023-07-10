@@ -147,6 +147,17 @@ body {
   animation-delay: 1s;
 }
 
+.sticky {
+  position: fixed;
+  bottom: 3%;
+  right: 3%;
+  stroke: #636363;
+}
+
+.sticky:hover {
+  stroke: #acacac;
+}
+
 @keyframes typing {
   from {
     width: 0;

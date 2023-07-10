@@ -1,4 +1,4 @@
-import { MutableRefObject, useRef, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import Papa, { ParseResult } from 'papaparse';
 import {
   Chart as ChartJS,
@@ -11,7 +11,7 @@ import {
   Tooltip,
   Legend,
 } from 'chart.js';
-import { Line, Bar } from 'react-chartjs-2';
+import { Bar } from 'react-chartjs-2';
 
 ChartJS.register(
   CategoryScale,
@@ -34,7 +34,6 @@ type Values = {
 };
 
 export default function Chart() {
-  const cRef: MutableRefObject<any> = useRef();
   const [values, setValues] = useState<Data[] | undefined>();
 
   const getCSV = () => {
@@ -51,7 +50,6 @@ export default function Chart() {
   };
 
   const options2 = {
-    // indexAxis: 'y' as const,
     plugins: {
       legend: {
         display: false,

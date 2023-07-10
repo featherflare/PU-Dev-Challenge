@@ -1,8 +1,9 @@
 import Chart from './Chart';
+import { LegacyRef, forwardRef } from 'react';
 
-export default function Cases() {
+const Cases = forwardRef((props, ref: LegacyRef<HTMLElement> | undefined) => {
   return (
-    <section className='section invert flex'>
+    <section className='section invert flex' ref={ref}>
       <div className='margin'>
         <div className='IBM header2'>จำนวนคดีที่เกิดขึ้น</div>
         <div className='IBM body padding2'>
@@ -23,4 +24,6 @@ export default function Cases() {
       </div>
     </section>
   );
-}
+});
+
+export default Cases;

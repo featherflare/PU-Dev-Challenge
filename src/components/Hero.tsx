@@ -1,6 +1,8 @@
-export default function Hero() {
+import { LegacyRef, forwardRef } from 'react';
+
+const Hero = forwardRef((props, ref: LegacyRef<HTMLElement> | undefined) => {
   return (
-    <section className='section flex'>
+    <section className='section flex' ref={ref}>
       <div className='IBM header center typed margin'>ม.๑๑๒</div>
       <div className='IBM body center margin padding1 delays1 fade'>
         “ผู้ใดหมิ่นประมาท ดูหมิ่น หรือแสดงความอาฆาตมาดร้าย พระมหากษัตริย์
@@ -9,4 +11,6 @@ export default function Hero() {
       </div>
     </section>
   );
-}
+});
+
+export default Hero;
