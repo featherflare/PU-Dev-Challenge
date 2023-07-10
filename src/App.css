@@ -55,12 +55,12 @@ body {
 
 .aspect4-3 {
   aspect-ratio: 4/3;
-  background-color: red;
 }
 
 .header {
   font-size: clamp(60px, 30vw, 164px);
   font-style: normal;
+  margin: 0 auto;
   font-weight: 400;
   line-height: 100%;
 }
@@ -76,7 +76,7 @@ body {
   font-size: clamp(10px, 5vw, 18px);
   font-style: normal;
   font-weight: 400;
-  line-height: 100%;
+  line-height: 150%;
 }
 
 .body2 {
@@ -124,6 +124,46 @@ body {
   flex-shrink: 0;
   flex-direction: column;
   justify-content: center;
+}
+
+.typed {
+  overflow: hidden;
+  white-space: normal;
+  width: 0;
+  animation: typing;
+  animation-duration: 1.5s;
+  animation-timing-function: steps(30, end);
+  animation-fill-mode: forwards;
+}
+
+.fade {
+  opacity: 0;
+  animation: fade;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+}
+
+.delays1 {
+  animation-delay: 1s;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: clamp(240px, 90vw, 720px);
+    height: fit-content;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @media only screen and (max-width: 450px) {
