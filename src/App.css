@@ -48,6 +48,16 @@ body {
   width: clamp(240px, 90vw, 480px);
 }
 
+.margin3 {
+  margin: auto;
+  width: clamp(240px, 90vw, 500px);
+}
+
+.aspect4-3 {
+  aspect-ratio: 4/3;
+  background-color: red;
+}
+
 .header {
   font-size: clamp(60px, 30vw, 164px);
   font-style: normal;

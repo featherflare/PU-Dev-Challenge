@@ -9,7 +9,7 @@ export default function Cases() {
           จึงมีการกล่าวหากันเป็นจำนวนมากในช่วงที่มีความขัดแย้งทางการเมืองหลังจากปี
           2548 เป็นต้นมา
         </div>
-        <div></div>
+        <div className='margin3 aspect4-3 padding2'></div>
         <div className='IBM body2 center'>
           ที่มา:{' '}
           <span>
