@@ -1,42 +1,42 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+.IBM {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+}
+
+.Inter {
+  font-family: 'Inter', sans-serif;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  background-color: black;
+  color: white;
+}
+
+.section1 {
+  height: 100vh;
+  margin: auto;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.header {
   text-align: center;
+  font-size: clamp(60px, 30vw, 164px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
 }
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+.detail {
+  text-align: center;
+  font-size: clamp(10px, 5vw, 18px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+  width: clamp(200px, 80vw, 720px);
+  margin: 5% auto;
 }
