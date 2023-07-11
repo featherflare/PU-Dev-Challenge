@@ -58,28 +58,12 @@ function App() {
   useEffect(() => {
     console.log(section);
     if (section === 0) {
-      heroRef.current?.classList.remove('active');
-      caseRef.current?.classList.remove('active');
-      opinionsRef.current?.classList.remove('active');
-      footerRef.current?.classList.remove('active');
       buttonRef.current.classList.remove('flip');
     } else if (section === 1) {
-      heroRef.current?.classList.remove('active');
-      caseRef.current?.classList.add('active');
-      opinionsRef.current?.classList.remove('active');
-      footerRef.current?.classList.remove('active');
       buttonRef.current.classList.remove('flip');
     } else if (section === 2) {
-      heroRef.current?.classList.remove('active');
-      caseRef.current?.classList.remove('active');
-      opinionsRef.current?.classList.add('active');
-      footerRef.current?.classList.remove('active');
       buttonRef.current.classList.remove('flip');
     } else if (section === 3) {
-      heroRef.current?.classList.remove('active');
-      caseRef.current?.classList.remove('active');
-      opinionsRef.current?.classList.remove('active');
-      footerRef.current?.classList.add('active');
       buttonRef.current.classList.add('flip');
     }
   }, [section]);
@@ -99,9 +83,9 @@ function App() {
         </svg>
       </div>
       <Hero ref={heroRef} />
-      <Cases ref={caseRef} />
-      <Opinions ref={opinionsRef} />
-      <Footer ref={footerRef} />
+      <Cases ref={caseRef} active={section === 1 ? 'active' : ''} />
+      <Opinions ref={opinionsRef} active={section >= 2 ? 'active' : ''} />
+      <Footer ref={footerRef} active={section === 3 ? 'active' : ''} />
     </>
   );
 }

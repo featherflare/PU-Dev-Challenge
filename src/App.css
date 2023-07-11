@@ -172,6 +172,10 @@ body {
   stroke: #acacac;
 }
 
+.opacity {
+  opacity: 0;
+}
+
 @keyframes typing {
   from {
     width: 0;

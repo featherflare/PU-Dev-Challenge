@@ -29,11 +29,8 @@ type Data = {
   cases: number;
 };
 
-type Values = {
-  data: Data[];
-};
-
 export default function Chart() {
+  // Get value in CSV file
   const [values, setValues] = useState<Data[] | undefined>();
 
   const getCSV = () => {
@@ -43,13 +40,22 @@ export default function Chart() {
       skipEmptyLines: true,
       delimiter: ',',
       complete: (results: ParseResult<Data>) => {
-        console.log(results.data); // Check if the parsed data is correct
         setValues(results.data);
       },
     });
   };
 
-  const options2 = {
+  useEffect(() => {
+    getCSV();
+  }, []);
+
+  useEffect(() => {
+    console.log(values);
+  }, [values]);
+
+  // Map value in CSV to chart
+
+  const options = {
     plugins: {
       legend: {
         display: false,
@@ -85,15 +91,7 @@ export default function Chart() {
     ],
   };
 
-  useEffect(() => {
-    getCSV();
-  }, []);
-
-  useEffect(() => {
-    console.log(values);
-  }, [values]);
-
-  const chart = <Bar options={options2} data={chartData} />;
+  const chart = <Bar options={options} data={chartData} />;
 
   return (
     <>
